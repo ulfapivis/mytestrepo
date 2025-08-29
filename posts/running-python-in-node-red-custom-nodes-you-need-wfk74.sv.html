@@ -1,0 +1,240 @@
+
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Running Python in Node-RED: Custom Nodes You Need</title>
+    <link rel="stylesheet" href="../styles.css">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4812868484170779"
+     crossorigin="anonymous"></script>
+    <script src="https://analytics.ahrefs.com/analytics.js" data-key="nipj3zgOZJ4RBzFgPCEjjw" async></script>
+<link rel="icon" type="image/png" sizes="16x16" href="/icon-16.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/icon-32.png">
+</head>
+<body style="background-color: #ffffff;">
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="/index.sv.html">APIVIS</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/index.sv.html#services">Tjänster</a></li>
+                <li><a href="/index.sv.html#about">Om oss</a></li>
+                <li><a href="/index.sv.html#blog">Blog</a></li>
+                <li><a href="/index.sv.html#contact">Kontakt</a></li>
+            </ul>
+            <div class="lang-switcher">
+                <a href="/posts/running-python-in-node-red-custom-nodes-you-need-wfk74.en.html" class="" data-lang="en">EN</a> | <a href="/posts/running-python-in-node-red-custom-nodes-you-need-wfk74.sv.html" class="lang-active" data-lang="sv">SV</a>
+            </div>
+            <div class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Running Python in Node-RED: Custom Nodes You Need</h2>
+
+            <div><p>Node-RED is a powerful flow-based tool for wiring together hardware devices, APIs, and online services. When your project demands Python’s ecosystem—be it machine learning libraries, data manipulation, or quick scripting—you’ll want custom nodes that bridge Python and Node-RED seamlessly. In this article, we explore three standout community-built nodes that let you run Python code within your flows, each catering to different needs and workflows.</p>
+<h3>node-red-contrib-pythonshell</h3>
+<p>node-red-contrib-pythonshell provides a simple shell-like interface for executing Python scripts. It’s designed for speed and ease of use—ideal when you want to spin up a quick Python script and feed its output back into your Node-RED flow without fuss.</p>
+<p>Pros:</p>
+<ul>
+<li>User-friendly setup with minimal configuration.</li>
+<li>High execution speed, making it great for rapid prototyping.</li>
+</ul>
+<p>Cons:</p>
+<ul>
+<li>Limited options for customizing the Python runtime or handling complex dependencies.</li>
+</ul>
+<p>Installation:</p>
+<ul>
+<li>Available via Node-RED’s Palette Manager or npm under <code>node-red-contrib-pythonshell</code>.</li>
+</ul>
+<hr>
+<h3>node-red-contrib-python-venv</h3>
+<p>When isolation matters—such as managing conflicting Python packages or ensuring reproducible environments—node-red-contrib-python-venv is your go-to. It runs scripts in a virtual environment, keeping your global Python setup pristine and predictable.</p>
+<p>Pros:</p>
+<ul>
+<li>Maintains a clean global scope by encapsulating dependencies.</li>
+<li>Lets you target specific Python versions or library sets per node.</li>
+</ul>
+<p>Cons:</p>
+<ul>
+<li>Requires extra setup to initialize and manage virtual environments.</li>
+<li>Slightly steeper learning curve for those new to Python venv workflows.</li>
+</ul>
+<p>Installation:</p>
+<ul>
+<li>Install via Node-RED’s Palette Manager; configure the <code>venv</code> path in the node’s settings.</li>
+</ul>
+<hr>
+<h3>Pynodered</h3>
+<p>Pynodered acts like a bi-directional bridge, turning Node-RED into a full-fledged host for Python modules. Instead of just firing off scripts, it lets you expose Python functions as Node-RED nodes, enabling true code reuse and deeper integration with Python libraries.</p>
+<p>Pros:</p>
+<ul>
+<li>Exposes Python functions directly in the Node-RED editor.</li>
+<li>Facilitates complex workflows by leveraging Python’s rich ecosystem.</li>
+</ul>
+<p>Cons:</p>
+<ul>
+<li>Initial configuration and registration of functions can be more involved.</li>
+<li>May require familiarity with both Node-RED’s and Python’s packaging conventions.</li>
+</ul>
+<p>Installation:</p>
+<ul>
+<li>Install <code>pynodered</code> from npm and follow the documentation to register your Python scripts as nodes.</li>
+</ul>
+<hr>
+<h1>Choosing the Right Node</h1>
+<ul>
+<li>For <strong>quick scripts</strong> or one-off tasks, start with node-red-contrib-pythonshell.</li>
+<li>When <strong>dependency management</strong> and reproducibility are critical, opt for node-red-contrib-python-venv.</li>
+<li>If you need <strong>deep integration</strong> and want to surface Python code as reusable nodes, go with Pynodered.</li>
+</ul>
+<p>Each of these nodes unlocks a different dimension of Python within Node-RED. Try them out, benchmark them against your use case, and lean into the one that accelerates your development. </p>
+<hr>
+<p>Looking ahead, we’ll dive into best practices for debugging Python flows in Node-RED, performance tuning tips, and how to deploy Python-powered Node-RED solutions at scale. Stay tuned for more on leveraging the full potential of this hybrid ecosystem.</p>
+<h1>Introducing the Python Bridge for Node-RED</h1>
+<p>Alongside the Python Shell, virtual-env, and Pynodered nodes discussed earlier, there’s a fourth option—often called the <strong>Python Bridge</strong>—that offers a persistent, high-performance connection to a live Python interpreter. Instead of spawning a fresh process on each message, it keeps a single Python session alive and pipes commands back and forth, cutting startup overhead and unlocking more interactive workflows.</p>
+<hr>
+<h3>node-red-contrib-python-bridge</h3>
+<p>node-red-contrib-python-bridge is a community-built Node-RED node that leverages the <a href="https://www.npmjs.com/package/python-bridge">python-bridge</a> NPM library under the hood. It launches one Python process when your flows deploy, then uses JSON-RPC over stdio to execute snippets, call functions, and import modules on the fly.</p>
+<p>Pros:</p>
+<ul>
+<li>Maintains a persistent Python REPL for ultra-low latency  </li>
+<li>Seamlessly pass variables and complex data structures between Node-RED and Python  </li>
+<li>Supports async/await patterns in Node.js code to coordinate with Python calls</li>
+</ul>
+<p>Cons:</p>
+<ul>
+<li>A long-running Python process means you need to manage state carefully  </li>
+<li>If the Python interpreter crashes, all dependent flows will hang until you redeploy  </li>
+<li>Requires a compatible Python version and matching library dependencies</li>
+</ul>
+<p>Installation:</p>
+<ol>
+<li>From your project folder or in Node-RED’s root directory run:  <pre><code class="language-bash">npm install node-red-contrib-python-bridge python-bridge
+</code></pre>
+</li>
+<li>Restart Node-RED or use the Palette Manager to install “python-bridge”.</li>
+</ol>
+<p>Configuration:</p>
+<ul>
+<li><strong>Python Path</strong>: Point to your <code>python3</code> executable (virtual-env paths are supported)  </li>
+<li><strong>Init Script</strong>: (Optional) Supply a block of code to run once at startup—ideal for imports or global setup  </li>
+<li><strong>Timeout</strong>: Define how long Node-RED waits for a Python result before flagging an error</li>
+</ul>
+<hr>
+<h3>Quick Start Example</h3>
+<ol>
+<li>Drag the <strong>Python Bridge</strong> node onto your flow.  </li>
+<li>Set the <strong>Python Path</strong> to your interpreter (e.g., <code>/usr/bin/python3</code>).  </li>
+<li>In the node’s <strong>Function</strong> field enter:<pre><code class="language-python">def multiply(a, b):
+    return a * b
+</code></pre>
+</li>
+<li>Wire an <strong>Inject</strong> node sending <code>{ &quot;a&quot;: 6, &quot;b&quot;: 7 }</code> to the Bridge.  </li>
+<li>In a downstream <strong>Function</strong> node, call:<pre><code class="language-js">// within a Node-RED function node
+msg.payload = await python.call(&#39;multiply&#39;, msg.payload.a, msg.payload.b);
+return msg;
+</code></pre>
+</li>
+<li>Attach a <strong>Debug</strong> node to see <code>42</code> pop out in your sidebar.</li>
+</ol>
+<h3>When to Choose the Python Bridge</h3>
+<ul>
+<li>You need sub-second responses and can’t tolerate process-spawn delays.  </li>
+<li>Your flows rely on interactive Python modules (e.g., TensorFlow sessions, open sockets).  </li>
+<li>You want to define Python functions once and reuse them across many messages with minimal overhead.</li>
+</ul>
+<p>If you prefer stateless execution or need strict isolation per message, stick with the Shell or venv nodes. But for long-running analytics or real-time workflows—like streaming data from sensors into a trained ML model—the Python Bridge is the fastest, most flexible integration available today.</p>
+<hr>
+<h1>Comparing node-red-contrib-python-bridge and Pynodered</h1>
+<p>When you need to blend Python’s power into your Node-RED flows, both <strong>node-red-contrib-python-bridge</strong> and <strong>Pynodered</strong> look attractive. At a glance, each lets you call Python code—but under the hood, they target different developer workflows, performance profiles, and integration styles.</p>
+<hr>
+<h3>1. Integration Model</h3>
+<ul>
+<li><p><strong>node-red-contrib-python-bridge</strong><br>Launches a single, persistent Python interpreter at flow deployment. Node-RED talks to it over stdio via JSON-RPC. Your flows send commands into that live session and receive results back immediately.</p>
+</li>
+<li><p><strong>Pynodered</strong><br>Scans your Python modules (usually marked with decorators) at startup and automatically generates native Node-RED nodes for each exported function. When a flow triggers one of those nodes, it invokes the corresponding Python function, then returns the result.</p>
+</li>
+</ul>
+<hr>
+<h3>2. Developer Workflow</h3>
+<ul>
+<li><p><strong>Bridge</strong>  </p>
+<ul>
+<li>Write inline scripts or load external <code>.py</code> files in the Bridge node’s “init script.”  </li>
+<li>Call any function dynamically using <code>await python.call(&#39;funcName&#39;, args…)</code> inside a Function node.  </li>
+<li>Manage imports, globals, and state manually within that one interpreter session.</li>
+</ul>
+</li>
+<li><p><strong>Pynodered</strong>  </p>
+<ul>
+<li>Decorate your Python functions (for example with <code>@pynodered.node</code>) in a module.  </li>
+<li>Install or configure Pynodered to point at your module directory.  </li>
+<li>Each decorated function appears as a drag-and-drop Node-RED node, complete with configurable inputs, outputs, and properties.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3>3. State and Performance</h3>
+<table>
+<thead>
+<tr>
+<th>Criterion</th>
+<th>Python Bridge</th>
+<th>Pynodered</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Interpreter lifecycle</td>
+<td>One long-running process</td>
+<td>May spin up short-lived workers per node invocation or reuse pools, depending on setup</td>
+</tr>
+<tr>
+<td>State persistence</td>
+<td>Variables, sockets, ML models stay loaded</td>
+<td>Minimal persistent state unless you code it in; functions are stateless by default</td>
+</tr>
+<tr>
+<td>Latency</td>
+<td>Millisecond-level, no spawn overhead</td>
+<td>Slight startup overhead when invoking each node, but optimized for repeated calls</td>
+</tr>
+<tr>
+<td>Resource isolation</td>
+<td>Shared across all calls—handle with care</td>
+<td>Each function node can be sandboxed separately</td>
+</tr>
+</tbody></table>
+<hr>
+<h3>4. When to Choose Which</h3>
+<ul>
+<li><p>Pick <strong>node-red-contrib-python-bridge</strong> if you need  </p>
+<ul>
+<li>Sub-second, interactive workflows (e.g., real-time sensor processing).  </li>
+<li>A REPL-style session where you load models once and call them many times.</li>
+</ul>
+</li>
+<li><p>Pick <strong>Pynodered</strong> if you want  </p>
+<ul>
+<li>A declarative, Node-RED–native palette of Python-powered nodes.  </li>
+<li>Clear separation between each function’s configuration and Node-RED’s UI, without juggling JSON-RPC calls.</li>
+</ul>
+</li>
+</ul>
+<p>Both tools unlock Python’s ecosystem in Node-RED, but your choice hinges on whether you prefer a live Python REPL (Bridge) or a more Node-RED-centric, function-as-node approach (Pynodered).</p>
+</div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 APIVIS. All rights reserved.</p>
+    </footer>
+    <script src="../script.js"></script>
+</body>
+</html>
