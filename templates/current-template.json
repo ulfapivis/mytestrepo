@@ -740,7 +740,15 @@
     },
     {
       "selectors": [
-        "#ipng"
+        "#ibzv"
+      ],
+      "style": {
+        "padding": "10px"
+      }
+    },
+    {
+      "selectors": [
+        "#ij18"
       ],
       "style": {
         "padding": "10px"
@@ -783,7 +791,7 @@
                   }
                 ],
                 "attributes": {
-                  "id": "i0y3"
+                  "id": "ikcy"
                 },
                 "components": [
                   {
@@ -815,7 +823,14 @@
                 "type": "text",
                 "content": "Insert your text here",
                 "attributes": {
-                  "id": "ipng"
+                  "id": "ibzv"
+                }
+              },
+              {
+                "type": "text",
+                "content": "Insert your text here",
+                "attributes": {
+                  "id": "ij18"
                 }
               }
             ],
@@ -826,11 +841,11 @@
               "tagName": "html"
             }
           },
-          "id": "5JRLR6hS6Am3lDUZ"
+          "id": "ExStXuimGwdn6b5A"
         }
       ],
       "type": "main",
-      "id": "o28nERxA0UqFW6bB"
+      "id": "BsD1Jpx0RqA1H2G0"
     }
   ],
   "symbols": []
