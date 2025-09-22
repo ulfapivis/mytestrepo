@@ -672,71 +672,6 @@
         "border-left-color": "rgb(33, 150, 243)",
         "font-size": "13px"
       }
-    },
-    {
-      "selectors": [
-        {
-          "name": "gjs-row",
-          "private": 1
-        }
-      ],
-      "style": {
-        "display": "table",
-        "padding-top": "10px",
-        "padding-right": "10px",
-        "padding-bottom": "10px",
-        "padding-left": "10px",
-        "width": "100%"
-      }
-    },
-    {
-      "selectors": [
-        {
-          "name": "gjs-cell",
-          "private": 1
-        }
-      ],
-      "style": {
-        "width": "100%",
-        "display": "block"
-      },
-      "mediaText": "(max-width: 768px)",
-      "atRuleType": "media"
-    },
-    {
-      "selectors": [
-        "gjs-cell30"
-      ],
-      "style": {
-        "width": "100%",
-        "display": "block"
-      },
-      "mediaText": "(max-width: 768px)",
-      "atRuleType": "media"
-    },
-    {
-      "selectors": [
-        "gjs-cell70"
-      ],
-      "style": {
-        "width": "100%",
-        "display": "block"
-      },
-      "mediaText": "(max-width: 768px)",
-      "atRuleType": "media"
-    },
-    {
-      "selectors": [
-        {
-          "name": "gjs-cell",
-          "private": 1
-        }
-      ],
-      "style": {
-        "width": "8%",
-        "display": "table-cell",
-        "height": "75px"
-      }
     }
   ],
   "pages": [
@@ -754,56 +689,6 @@
               "background-position",
               "background-size"
             ],
-            "components": [
-              {
-                "name": "Row",
-                "droppable": ".gjs-cell",
-                "resizable": {
-                  "tl": 0,
-                  "tc": 0,
-                  "tr": 0,
-                  "cl": 0,
-                  "cr": 0,
-                  "bl": 0,
-                  "br": 0,
-                  "minDim": 1
-                },
-                "classes": [
-                  {
-                    "name": "gjs-row",
-                    "private": 1
-                  }
-                ],
-                "attributes": {
-                  "id": "ifa4"
-                },
-                "components": [
-                  {
-                    "name": "Cell",
-                    "draggable": ".gjs-row",
-                    "resizable": {
-                      "tl": 0,
-                      "tc": 0,
-                      "tr": 0,
-                      "cl": 0,
-                      "cr": 1,
-                      "bl": 0,
-                      "br": 0,
-                      "minDim": 1,
-                      "bc": 0,
-                      "currentUnit": 1,
-                      "step": 0.2
-                    },
-                    "classes": [
-                      {
-                        "name": "gjs-cell",
-                        "private": 1
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
             "head": {
               "type": "head"
             },
@@ -811,11 +696,11 @@
               "tagName": "html"
             }
           },
-          "id": "mi41VXP46fogv0ru"
+          "id": "HhugvmUNRaZZskrF"
         }
       ],
       "type": "main",
-      "id": "AuJTPRF4ygkYDbbx"
+      "id": "DtLSLBdF6NcNPkMR"
     }
   ],
   "symbols": []
