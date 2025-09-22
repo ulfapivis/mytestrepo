@@ -740,7 +740,15 @@
     },
     {
       "selectors": [
-        "#i2mn"
+        "#intj"
+      ],
+      "style": {
+        "padding": "10px"
+      }
+    },
+    {
+      "selectors": [
+        "#itia"
       ],
       "style": {
         "padding": "10px"
@@ -762,6 +770,9 @@
               "background-position",
               "background-size"
             ],
+            "attributes": {
+              "id": "iy4k"
+            },
             "components": [
               {
                 "name": "Row",
@@ -783,7 +794,7 @@
                   }
                 ],
                 "attributes": {
-                  "id": "i0hv"
+                  "id": "idz6"
                 },
                 "components": [
                   {
@@ -807,18 +818,23 @@
                         "name": "gjs-cell",
                         "private": 1
                       }
-                    ],
-                    "components": [
-                      {
-                        "type": "text",
-                        "content": "Insert your text here",
-                        "attributes": {
-                          "id": "i2mn"
-                        }
-                      }
                     ]
                   }
                 ]
+              },
+              {
+                "type": "text",
+                "content": "Insert your text here",
+                "attributes": {
+                  "id": "itia"
+                }
+              },
+              {
+                "type": "text",
+                "content": "Insert your text here",
+                "attributes": {
+                  "id": "intj"
+                }
               }
             ],
             "head": {
@@ -828,11 +844,11 @@
               "tagName": "html"
             }
           },
-          "id": "OPHDx3xgXeaDleSt"
+          "id": "RjI0ZgtScCFWZg6d"
         }
       ],
       "type": "main",
-      "id": "q28ijLQ8fHQBIipY"
+      "id": "2wl4bElDqwSBH7Jz"
     }
   ],
   "symbols": []
