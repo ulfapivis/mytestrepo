@@ -740,7 +740,7 @@
     },
     {
       "selectors": [
-        "#ifp1"
+        "#i3mu"
       ],
       "style": {
         "padding": "10px"
@@ -762,9 +762,6 @@
               "background-position",
               "background-size"
             ],
-            "attributes": {
-              "id": "ib1q"
-            },
             "components": [
               {
                 "name": "Row",
@@ -786,7 +783,7 @@
                   }
                 ],
                 "attributes": {
-                  "id": "i0bd"
+                  "id": "i6h2"
                 },
                 "components": [
                   {
@@ -816,7 +813,7 @@
                         "type": "text",
                         "content": "Insert your text here",
                         "attributes": {
-                          "id": "ifp1"
+                          "id": "i3mu"
                         }
                       }
                     ]
@@ -831,11 +828,11 @@
               "tagName": "html"
             }
           },
-          "id": "JetnlIoEKrNFUTr2"
+          "id": "4n6E15I5BlfRxejj"
         }
       ],
       "type": "main",
-      "id": "d5luFL1K4R7QdAb7"
+      "id": "JMAE9ONMikymlSGn"
     }
   ],
   "symbols": []
