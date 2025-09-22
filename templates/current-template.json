@@ -737,22 +737,6 @@
         "display": "table-cell",
         "height": "75px"
       }
-    },
-    {
-      "selectors": [
-        "#ibzv"
-      ],
-      "style": {
-        "padding": "10px"
-      }
-    },
-    {
-      "selectors": [
-        "#ij18"
-      ],
-      "style": {
-        "padding": "10px"
-      }
     }
   ],
   "pages": [
@@ -791,7 +775,7 @@
                   }
                 ],
                 "attributes": {
-                  "id": "ikcy"
+                  "id": "i07r"
                 },
                 "components": [
                   {
@@ -818,20 +802,6 @@
                     ]
                   }
                 ]
-              },
-              {
-                "type": "text",
-                "content": "Insert your text here",
-                "attributes": {
-                  "id": "ibzv"
-                }
-              },
-              {
-                "type": "text",
-                "content": "Insert your text here",
-                "attributes": {
-                  "id": "ij18"
-                }
               }
             ],
             "head": {
@@ -841,11 +811,11 @@
               "tagName": "html"
             }
           },
-          "id": "ExStXuimGwdn6b5A"
+          "id": "GgwDG49kad5h9UZd"
         }
       ],
       "type": "main",
-      "id": "BsD1Jpx0RqA1H2G0"
+      "id": "sXadveDzlE7Sc7Gc"
     }
   ],
   "symbols": []
